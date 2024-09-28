@@ -4,7 +4,7 @@ import Fetch from "./Fetch";
 function App (){
   return(
 <div>
-  <Fetch />
+ <Fetch />
 </div>
   )
  }
