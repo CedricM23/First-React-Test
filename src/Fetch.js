@@ -1,5 +1,7 @@
-import { useState } from "react";
 import { useEffect } from "react";
+import { useState } from "react";
+import Animation from "./Animation.json"
+import Lottie from "lottie-react";
 import "./App.css"
 
  function Fetch() {
@@ -18,7 +20,6 @@ import "./App.css"
     fetchdata();
   }, [])
 
-
   return Object.keys(user).length > 0 ? (
     // if array is greater than zero it returns true
     <div>
@@ -30,13 +31,11 @@ import "./App.css"
       <h2>Cell: {user.results[0].phone}</h2>
       <h2> City: {user.results[0].location.city}</h2>
       <img src={user.results[0].picture.large} alt=""></img>
-
     </div>) : 
 
     //returns data pending if less than zero
     (<div>
-        <h1> Data Pending...</h1>
-        
+        <Lottie animationData={Animation}/>
     </div>)
 }
  export default Fetch;
