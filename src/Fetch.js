@@ -29,8 +29,9 @@ import "./App.css"
       <h2> first name: {user.results[0].name.first}</h2>
       <h2> last name: {user.results[0].name.last}</h2>
       <h2> age: {user.results[0].dob.age}</h2>
-      <h2>Cell: {user.results[0].phone}</h2>
+      <h2>Cell: {user.results[0].cell}</h2>
       <h2> City: {user.results[0].location.city}</h2>
+      <h2>id: {user.results[0].id.name} - {user.results[0].id.value}</h2>
       <img src={user.results[0].picture.large} alt=""></img>
     </div>) : 
 
