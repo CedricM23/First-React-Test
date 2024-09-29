@@ -1,6 +1,4 @@
 import Fetch from "./Fetch";
-import { useState} from "react";
-import { useReducer } from "react";
 
 
 function refreshPage(){ 
@@ -9,7 +7,6 @@ function refreshPage(){
 
 
 function App (){
-  const [, forceUpdate] = useReducer(x => x + 1, 0)
   return(
 <div>
  <Fetch />

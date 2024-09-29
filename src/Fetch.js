@@ -20,6 +20,7 @@ import "./App.css"
     fetchdata();
   }, [])
 
+
   return Object.keys(user).length > 0 ? (
     // if array is greater than zero it returns true
     <div>
