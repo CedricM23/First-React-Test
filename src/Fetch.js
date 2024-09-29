@@ -35,6 +35,7 @@ import "./App.css"
 
     //returns data pending if less than zero
     (<div>
+      <h1> Data pending...</h1>
         <Lottie animationData={Animation}/>
     </div>)
 }

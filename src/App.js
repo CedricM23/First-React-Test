@@ -13,8 +13,8 @@ function App (){
   return(
 <div>
  <Fetch />
- 
- <button type="button" onClick={ refreshPage }> <span>Reload</span> </button> 
+
+ <button type="button" onClick={ refreshPage }> <span>Reload Page</span> </button> 
 </div>
   )
  }
