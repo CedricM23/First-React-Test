@@ -1,18 +1,43 @@
 import Fetch from "./Fetch";
-import DessertsList from "./DessertsList";
+import React from "react";
+
+// function refreshPage(){ 
+//   window.location.reload(); 
+// }
+
+const Row = ({children, spacing}) => {
+
+  const childStyle = {
+    marginLeft: `${spacing}px`
+  }
+ return(
+  <div className="Row">
+    {React.Children.map(children, (child, index) =>{
+      return React.cloneElement(child, {
+        style: {
+          ...child.props.style,
+          ...(index > 0 ? childStyle: {}),
+        },
+      });
+    })}
+  </div>
+ );
+};
 
 
-function refreshPage(){ 
-  window.location.reload(); 
-}
-
-
-function App (){
+function LiveOrders (){
   return(
-<div>
- <Fetch />
- <button type="button" onClick={ refreshPage }> <span>Reload Page</span> </button> 
+    <div className="App">
+      <Row spacing={32}>
+        <p>Pizza Margarita</p>
+        <p>2</p>
+        <p>30$</p>
+        <p>18:30</p>
+        <p>John</p>
+      </Row>
+ {/* <Fetch />
+ <button type="button" onClick={ refreshPage }> <span>Reload Page</span> </button>  */}
 </div>
   )
  }
- export default App;
+ export default LiveOrders;
