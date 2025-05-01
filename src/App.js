@@ -35,7 +35,7 @@ function LiveOrders (){
         <p>18:30</p>
         <p>John</p>
       </Row>
- {/* <Fetch />
+  <Fetch />
  <button type="button" onClick={ refreshPage }> <span>Reload Page</span> </button>  */}
 </div>
   )
